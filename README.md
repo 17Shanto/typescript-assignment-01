@@ -6,19 +6,19 @@ inter face allowing multiple declarations with the same name to be merged into a
 Syntax: Interfaces use the interface keyword, while types use the type keyword
 
 Example
-// Interface example
-interface Animal {
-  name: string;
+// Interface example </br>
+interface Animal {</br>
+  name: string; </br>
 }
 
-interface Dog extends Animal {
-  breed: string;
-}
+interface Dog extends Animal {</br>
+  breed: string;</br>
+}</br>
 
-// Type example
-type Point = {
-  x: number;
-  y: number;
-};
+// Type example</br>
+type Point = {</br>
+  x: number;</br>
+  y: number;</br>
+};</br>
 
-type Shape = Point | { color: string }; // Union type
+
