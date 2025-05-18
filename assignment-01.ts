@@ -47,7 +47,6 @@
     }
 
 
-
     function processValue(value: string | number): number {
         if (typeof (value) === "string") {
             return value.length;
@@ -57,6 +56,7 @@
         }
 
     }
+
 
     interface Product {
         name: string;
@@ -77,6 +77,38 @@
         return products[indx];
     }
 
+    enum Day {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    }
 
+    function getDayType(day: Day): string {
+        switch (day) {
+            case Day.Saturday:
+            case Day.Sunday:
+                return "Weekend";
+                break;
+            default:
+                return "WeekDay";
+                break;
+        }
+    }
+
+    async function squareAsync(n: number): Promise<number> {
+        return new Promise((resolve, reject) => {
+            if (n >= 0) {
+                //resolve(n * n);
+                setTimeout(() => resolve(n * n), 1000);
+            }
+            else {
+                reject(new Error("Negative number not allowed"));
+            }
+        });
+    }
 
 }
